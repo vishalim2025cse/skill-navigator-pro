@@ -13,8 +13,20 @@ import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppStudyRouteImport } from './routes/app.study'
 import { Route as AppSkillsRouteImport } from './routes/app.skills'
+import { Route as AppSettingsRouteImport } from './routes/app.settings'
+import { Route as AppRoadmapRouteImport } from './routes/app.roadmap'
+import { Route as AppResourcesRouteImport } from './routes/app.resources'
+import { Route as AppProjectsRouteImport } from './routes/app.projects'
+import { Route as AppProfileRouteImport } from './routes/app.profile'
 import { Route as AppMentorRouteImport } from './routes/app.mentor'
+import { Route as AppGoalsRouteImport } from './routes/app.goals'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
+import { Route as AppCommunityRouteImport } from './routes/app.community'
+import { Route as AppCertificatesRouteImport } from './routes/app.certificates'
+import { Route as AppCareerRouteImport } from './routes/app.career'
+import { Route as AppCalendarRouteImport } from './routes/app.calendar'
+import { Route as AppAnalyticsRouteImport } from './routes/app.analytics'
+import { Route as AppAchievementsRouteImport } from './routes/app.achievements'
 
 const AppRoute = AppRouteImport.update({
   id: '/app',
@@ -36,9 +48,39 @@ const AppSkillsRoute = AppSkillsRouteImport.update({
   path: '/skills',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRoadmapRoute = AppRoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppResourcesRoute = AppResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProjectsRoute = AppProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProfileRoute = AppProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppMentorRoute = AppMentorRouteImport.update({
   id: '/mentor',
   path: '/mentor',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppGoalsRoute = AppGoalsRouteImport.update({
+  id: '/goals',
+  path: '/goals',
   getParentRoute: () => AppRoute,
 } as any)
 const AppDashboardRoute = AppDashboardRouteImport.update({
@@ -46,20 +88,74 @@ const AppDashboardRoute = AppDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => AppRoute,
 } as any)
+const AppCommunityRoute = AppCommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCertificatesRoute = AppCertificatesRouteImport.update({
+  id: '/certificates',
+  path: '/certificates',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCareerRoute = AppCareerRouteImport.update({
+  id: '/career',
+  path: '/career',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCalendarRoute = AppCalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAnalyticsRoute = AppAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAchievementsRoute = AppAchievementsRouteImport.update({
+  id: '/achievements',
+  path: '/achievements',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/app/achievements': typeof AppAchievementsRoute
+  '/app/analytics': typeof AppAnalyticsRoute
+  '/app/calendar': typeof AppCalendarRoute
+  '/app/career': typeof AppCareerRoute
+  '/app/certificates': typeof AppCertificatesRoute
+  '/app/community': typeof AppCommunityRoute
   '/app/dashboard': typeof AppDashboardRoute
+  '/app/goals': typeof AppGoalsRoute
   '/app/mentor': typeof AppMentorRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/projects': typeof AppProjectsRoute
+  '/app/resources': typeof AppResourcesRoute
+  '/app/roadmap': typeof AppRoadmapRoute
+  '/app/settings': typeof AppSettingsRoute
   '/app/skills': typeof AppSkillsRoute
   '/app/study': typeof AppStudyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/app/achievements': typeof AppAchievementsRoute
+  '/app/analytics': typeof AppAnalyticsRoute
+  '/app/calendar': typeof AppCalendarRoute
+  '/app/career': typeof AppCareerRoute
+  '/app/certificates': typeof AppCertificatesRoute
+  '/app/community': typeof AppCommunityRoute
   '/app/dashboard': typeof AppDashboardRoute
+  '/app/goals': typeof AppGoalsRoute
   '/app/mentor': typeof AppMentorRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/projects': typeof AppProjectsRoute
+  '/app/resources': typeof AppResourcesRoute
+  '/app/roadmap': typeof AppRoadmapRoute
+  '/app/settings': typeof AppSettingsRoute
   '/app/skills': typeof AppSkillsRoute
   '/app/study': typeof AppStudyRoute
 }
@@ -67,8 +163,20 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/app/achievements': typeof AppAchievementsRoute
+  '/app/analytics': typeof AppAnalyticsRoute
+  '/app/calendar': typeof AppCalendarRoute
+  '/app/career': typeof AppCareerRoute
+  '/app/certificates': typeof AppCertificatesRoute
+  '/app/community': typeof AppCommunityRoute
   '/app/dashboard': typeof AppDashboardRoute
+  '/app/goals': typeof AppGoalsRoute
   '/app/mentor': typeof AppMentorRoute
+  '/app/profile': typeof AppProfileRoute
+  '/app/projects': typeof AppProjectsRoute
+  '/app/resources': typeof AppResourcesRoute
+  '/app/roadmap': typeof AppRoadmapRoute
+  '/app/settings': typeof AppSettingsRoute
   '/app/skills': typeof AppSkillsRoute
   '/app/study': typeof AppStudyRoute
 }
@@ -77,24 +185,60 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/app'
+    | '/app/achievements'
+    | '/app/analytics'
+    | '/app/calendar'
+    | '/app/career'
+    | '/app/certificates'
+    | '/app/community'
     | '/app/dashboard'
+    | '/app/goals'
     | '/app/mentor'
+    | '/app/profile'
+    | '/app/projects'
+    | '/app/resources'
+    | '/app/roadmap'
+    | '/app/settings'
     | '/app/skills'
     | '/app/study'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/app'
+    | '/app/achievements'
+    | '/app/analytics'
+    | '/app/calendar'
+    | '/app/career'
+    | '/app/certificates'
+    | '/app/community'
     | '/app/dashboard'
+    | '/app/goals'
     | '/app/mentor'
+    | '/app/profile'
+    | '/app/projects'
+    | '/app/resources'
+    | '/app/roadmap'
+    | '/app/settings'
     | '/app/skills'
     | '/app/study'
   id:
     | '__root__'
     | '/'
     | '/app'
+    | '/app/achievements'
+    | '/app/analytics'
+    | '/app/calendar'
+    | '/app/career'
+    | '/app/certificates'
+    | '/app/community'
     | '/app/dashboard'
+    | '/app/goals'
     | '/app/mentor'
+    | '/app/profile'
+    | '/app/projects'
+    | '/app/resources'
+    | '/app/roadmap'
+    | '/app/settings'
     | '/app/skills'
     | '/app/study'
   fileRoutesById: FileRoutesById
@@ -134,11 +278,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppSkillsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/settings': {
+      id: '/app/settings'
+      path: '/settings'
+      fullPath: '/app/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/roadmap': {
+      id: '/app/roadmap'
+      path: '/roadmap'
+      fullPath: '/app/roadmap'
+      preLoaderRoute: typeof AppRoadmapRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/resources': {
+      id: '/app/resources'
+      path: '/resources'
+      fullPath: '/app/resources'
+      preLoaderRoute: typeof AppResourcesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/projects': {
+      id: '/app/projects'
+      path: '/projects'
+      fullPath: '/app/projects'
+      preLoaderRoute: typeof AppProjectsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/profile': {
+      id: '/app/profile'
+      path: '/profile'
+      fullPath: '/app/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/mentor': {
       id: '/app/mentor'
       path: '/mentor'
       fullPath: '/app/mentor'
       preLoaderRoute: typeof AppMentorRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/goals': {
+      id: '/app/goals'
+      path: '/goals'
+      fullPath: '/app/goals'
+      preLoaderRoute: typeof AppGoalsRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/dashboard': {
@@ -148,19 +334,85 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppDashboardRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/community': {
+      id: '/app/community'
+      path: '/community'
+      fullPath: '/app/community'
+      preLoaderRoute: typeof AppCommunityRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/certificates': {
+      id: '/app/certificates'
+      path: '/certificates'
+      fullPath: '/app/certificates'
+      preLoaderRoute: typeof AppCertificatesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/career': {
+      id: '/app/career'
+      path: '/career'
+      fullPath: '/app/career'
+      preLoaderRoute: typeof AppCareerRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/calendar': {
+      id: '/app/calendar'
+      path: '/calendar'
+      fullPath: '/app/calendar'
+      preLoaderRoute: typeof AppCalendarRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/analytics': {
+      id: '/app/analytics'
+      path: '/analytics'
+      fullPath: '/app/analytics'
+      preLoaderRoute: typeof AppAnalyticsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/achievements': {
+      id: '/app/achievements'
+      path: '/achievements'
+      fullPath: '/app/achievements'
+      preLoaderRoute: typeof AppAchievementsRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
 interface AppRouteChildren {
+  AppAchievementsRoute: typeof AppAchievementsRoute
+  AppAnalyticsRoute: typeof AppAnalyticsRoute
+  AppCalendarRoute: typeof AppCalendarRoute
+  AppCareerRoute: typeof AppCareerRoute
+  AppCertificatesRoute: typeof AppCertificatesRoute
+  AppCommunityRoute: typeof AppCommunityRoute
   AppDashboardRoute: typeof AppDashboardRoute
+  AppGoalsRoute: typeof AppGoalsRoute
   AppMentorRoute: typeof AppMentorRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppProjectsRoute: typeof AppProjectsRoute
+  AppResourcesRoute: typeof AppResourcesRoute
+  AppRoadmapRoute: typeof AppRoadmapRoute
+  AppSettingsRoute: typeof AppSettingsRoute
   AppSkillsRoute: typeof AppSkillsRoute
   AppStudyRoute: typeof AppStudyRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppAchievementsRoute: AppAchievementsRoute,
+  AppAnalyticsRoute: AppAnalyticsRoute,
+  AppCalendarRoute: AppCalendarRoute,
+  AppCareerRoute: AppCareerRoute,
+  AppCertificatesRoute: AppCertificatesRoute,
+  AppCommunityRoute: AppCommunityRoute,
   AppDashboardRoute: AppDashboardRoute,
+  AppGoalsRoute: AppGoalsRoute,
   AppMentorRoute: AppMentorRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppProjectsRoute: AppProjectsRoute,
+  AppResourcesRoute: AppResourcesRoute,
+  AppRoadmapRoute: AppRoadmapRoute,
+  AppSettingsRoute: AppSettingsRoute,
   AppSkillsRoute: AppSkillsRoute,
   AppStudyRoute: AppStudyRoute,
 }
